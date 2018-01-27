@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:WebhoseApiTest"
+             xmlns:telerikDataGrid="clr-namespace:Telerik.XamarinForms.DataGrid;assembly=Telerik.XamarinForms.DataGrid"
+             x:Class="WebhoseApiTest.MainPage"
+             BindingContext="{x:Static local:MainPageViewModel.Instance}">
+    <StackLayout>
+        <telerikDataGrid:RadDataGrid x:Name="DataGrid" ItemsSource="{Binding CurrentPosts,Mode=TwoWay}" AutoGenerateColumns="True"/>
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Newsを取得する" Command="{Binding GetNewsFromWebHoseCommand}"></Button>
+            <Button Text="SlackにPostする" Command="{Binding GetNewsFromWebHoseCommand}"></Button>
+            <Button Text="読み上げる" Command="{Binding SpeakSelectedPostCommand}"></Button>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
