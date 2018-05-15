@@ -6,7 +6,8 @@
              x:Class="WebhoseApiTest.MainPage"
              BindingContext="{x:Static local:MainPageViewModel.Instance}">
     <StackLayout>
-        <telerikDataGrid:RadDataGrid x:Name="DataGrid" ItemsSource="{Binding CurrentPosts,Mode=TwoWay}" AutoGenerateColumns="True"/>
+        <telerikDataGrid:RadDataGrid x:Name="DataGrid" ItemsSource="{Binding CurrentPosts,Mode=TwoWay}" AutoGenerateColumns="True" 
+                                     />
         <StackLayout Orientation="Horizontal">
             <Button Text="Newsを取得する" Command="{Binding GetNewsFromWebHoseCommand}"></Button>
             <Button Text="SlackにPostする" Command="{Binding GetNewsFromWebHoseCommand}"></Button>
